@@ -97,7 +97,7 @@ def main(args):
         Err = euclidean_distance_normalised_error(fr.shapes[-1], fr.gt_shape, distance_norm_f=inner_pupil)
         p2pErrs.append(Err)
 
-        text_file = open('../output/' + i.path.stem + '.68pt', "w")
+        text_file = open(args.outDir + i.path.stem + '.68pt', "w")
         np.savetxt(text_file, fr.shapes[-1].points, fmt='%d', newline='\n')
         text_file.close()
 
@@ -115,7 +115,8 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='ECT for face alignment')
     # Model structure
     parser.add_argument('--gpus', default=None, type=int, help='specify the gpu ID')
-    parser.add_argument('--imgDir', default='../IBUG68/', type=str, help='path to test images')
+    parser.add_argument('--imgDir', default='../imgs/', type=str, help='path to test images')
+    parser.add_argument('--outDir', default='../output/', type=str, help='path for saving prediction results')
     parser.add_argument('--prototxt', default='../caffe/models/300w/matlab.prototxt', type=str,
                         help='path to caffe model prototxt')
     parser.add_argument('--model', default='../model_data/300w_68pt.caffemodel', type=str,
