@@ -113,7 +113,7 @@ def main(args):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='ECT for face alignment')
-    # Model structure
+
     parser.add_argument('--gpus', default=None, type=int, help='specify the gpu ID')
     parser.add_argument('--imgDir', default='../imgs/', type=str, help='path to test images')
     parser.add_argument('--outDir', default='../output/', type=str, help='path for saving prediction results')
