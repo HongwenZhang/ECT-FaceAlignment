@@ -84,7 +84,7 @@ def main(args):
         net.blobs['data'].data[...] = transformer.preprocess('data', np.rollaxis(i.pixels, 0, 3))
         i.rspmap_data = np.array(net.forward()['upsample'])
         # zoom response maps
-        #i.rspmap_data = scipy.ndimage.zoom(i.rspmap_data, zoom=[1, 1, float(i.height) / i.rspmap_data.shape[-2],
+        # i.rspmap_data = scipy.ndimage.zoom(i.rspmap_data, zoom=[1, 1, float(i.height) / i.rspmap_data.shape[-2],
         #                                                               float(i.width) / i.rspmap_data.shape[-1]], order=1)  # mode = 'nearest'
 
         gt_s = i.landmarks['PTS'].lms
@@ -108,7 +108,7 @@ def main(args):
         sys.stdout.flush()
 
     p2pErrs = np.array(p2pErrs)
-    print('mean error: {}'.format(average(p2pErrs)))
+    print('NormalizedMeanError: {:.4f}'.format(average(p2pErrs)))
 
 
 if __name__ == '__main__':
@@ -120,7 +120,7 @@ if __name__ == '__main__':
                         help='path to caffe model prototxt')
     parser.add_argument('--model', default='../model_data/300w_68pt.caffemodel', type=str,
                         help='path to the pre-trained caffe model')
-    parser.add_argument('--verbose', default=False, help='show the landmark prediction results')
+    parser.add_argument('--verbose', default=True, help='show the landmark prediction results')
     parser.add_argument('--nIter', default=5, type=int, help='number of iterations for the turning step')
     parser.add_argument('--nComponent', default=30, type=int, help='number of PDM components to be used')
 
