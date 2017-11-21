@@ -1,0 +1,10 @@
+libGL error: dlopen /usr/lib64/dri/swrast_dri.so failed (/usr/local/MATLAB/R2015a/bin/glnxa64/../../sys/os/glnxa64/libstdc++.so.6: version `GLIBCXX_3.4.18' not found (required by /lib64/libLLVM-3.5-mesa.so))
+libGL error: unable to load driver: swrast_dri.so
+libGL error: failed to load driver: swrast
+{Error using textscan
+Invalid file identifier. Use fopen to generate a valid file identifier.
+} 
+{Undefined variable "files" or class "files".
+} 
+{Undefined function or variable 'files'.
+} 
