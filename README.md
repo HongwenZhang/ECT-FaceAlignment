@@ -8,7 +8,7 @@ This is the demo code for "Combining Data-driven and Model-driven Methods for Ro
 
 ## Instructions
 
-You may need to compile the caffe firstly before you run the demo code. The pre-trained caffemodel could be downloaded from [here](https://drive.google.com/drive/folders/1DLrrY2gdKht8YJ8fwFZanZSICRKKRurt)
+You may need to compile the caffe firstly before you run the demo code. The pre-trained caffemodel could be downloaded from [here](https://drive.google.com/drive/folders/1DLrrY2gdKht8YJ8fwFZanZSICRKKRurt).
 
 ```
 cd caffe/python
@@ -22,7 +22,7 @@ python run_demo.py --imgDir path/to/you/testing/images --model path/to/the/pretr
 ```
 
 ## Citation
-If you find this work useful in your research, please cite the following paper.
+If this work is helpful in your research, please cite the following paper
 ```
 @article{zhang2018combining,
   title={Combining Data-driven and Model-driven Methods for Robust Facial Landmark Detection},
