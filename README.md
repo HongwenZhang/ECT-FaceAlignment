@@ -1,8 +1,36 @@
+# Combining Data-driven and Model-driven Methods for Robust Facial Landmark Detection
 
-## TODO
-- [ ] Description
-- [ ] Requirements
-- [ ] Usage
+This is the demo code for "Combining Data-driven and Model-driven Methods for Robust Facial Landmark Detection"
+
+## Requirements
+
+- python 2.7
+
+## Instructions
+
+You may need to compile the caffe firstly before you run the demo code. The pre-trained caffemodel could be downloaded from [here](https://drive.google.com/drive/folders/1DLrrY2gdKht8YJ8fwFZanZSICRKKRurt)
+
+```
+cd caffe/python
+for req in $(cat requirements.txt); do pip install $req; done
+cd ..
+make all
+make pycaffe
+cd ..
+cd landmark_detection
+python run_demo.py --imgDir path/to/you/testing/images --model path/to/the/pretrained/caffemodel --verbose True
+```
+
+## Citation
+If you find this work useful in your research, please cite the following paper.
+```
+@article{zhang2018combining,
+  title={Combining Data-driven and Model-driven Methods for Robust Facial Landmark Detection},
+  author={Zhang, Hongwen and Li, Qi and Sun, Zhenan and Liu, Yunfan},
+  journal={IEEE Transactions on Information Forensics and Security},
+  year={2018}
+}
+```
 
 ## Acknowledgment
 
