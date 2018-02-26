@@ -1,6 +1,6 @@
 # Combining Data-driven and Model-driven Methods for Robust Facial Landmark Detection
 
-This is the demo code for "Combining Data-driven and Model-driven Methods for Robust Facial Landmark Detection"
+This is the demo code for [Combining Data-driven and Model-driven Methods for Robust Facial Landmark Detection](https://arxiv.org/abs/1611.10152).
 
 ## Requirements
 
